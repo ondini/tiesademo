@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Primary Visual Cortex (V1)",
+        "mni_coordinates": [
+            -10,
+            -90,
+            0
+        ],
+        "description": "Processes basic visual input in the occipital lobe.",
+        "frame": 0,
+        "duration": 1
+    },
+    {
+        "name": "Fusiform Face Area (FFA)",
+        "mni_coordinates": [
+            40,
+            -55,
+            -10
+        ],
+        "description": "Involved in facial recognition in the fusiform gyrus.",
+        "frame": 10,
+        "duration": 0.5
+    },
+    {
+        "name": "Dorsolateral Prefrontal Cortex (DLPFC)",
+        "mni_coordinates": [
+            30,
+            45,
+            30
+        ],
+        "description": "Handles executive functions and working memory.",
+        "frame": 15,
+        "duration": 0.6
+    },
+    {
+        "name": "Posterior Parietal Cortex (PPC)",
+        "mni_coordinates": [
+            -25,
+            -60,
+            50
+        ],
+        "description": "Supports visuospatial attention and sensory integration.",
+        "frame": 21,
+        "duration": 0.9
+    },
+    {
+        "name": "Anterior Cingulate Cortex (ACC)",
+        "mni_coordinates": [
+            0,
+            30,
+            20
+        ],
+        "description": "Linked to decision-making and emotion regulation.",
+        "frame": 30,
+        "duration": 0.7
+    },
+    {
+        "name": "Supplementary Motor Area (SMA)",
+        "mni_coordinates": [
+            0,
+            -5,
+            60
+        ],
+        "description": "Contributes to motor planning and initiation.",
+        "frame": 37,
+        "duration": 1
+    }
+]
