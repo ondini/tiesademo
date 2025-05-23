@@ -9,16 +9,20 @@ import { navigationCustomizations } from './customizations/navigation';
 import { surfacesCustomizations } from './customizations/surfaces';
 import { colorSchemes, typography, shadows, shape } from './themePrimitives';
 
+
 function AppTheme(props) {
-  const { children, themeComponents } = props;
+  const { children } = props;
   const theme = React.useMemo(() => {
     return createTheme({
           // For more details about CSS variables configuration, see https://mui.com/material-ui/customization/css-theme-variables/configuration/
           cssVariables: {
-            colorSchemeSelector: 'data-mui-color-scheme',
+            // colorSchemeSelector: 'data-mui-color-scheme',
             cssVarPrefix: 'template',
           },
-          palette: colorSchemes.light.palette,
+          defaultColorScheme: 'light',
+          palette: {
+            ...colorSchemes.light.palette,
+          },
           typography,
           shadows,
           shape,
@@ -28,10 +32,9 @@ function AppTheme(props) {
             ...feedbackCustomizations,
             ...navigationCustomizations,
             ...surfacesCustomizations,
-            ...themeComponents,
           },
         });
-  }, [themeComponents]);
+  }, []);
   return (
     <ThemeProvider theme={theme} disableTransitionOnChange>
       {children}

@@ -7,15 +7,16 @@ const customShadows = [...defaultTheme.shadows];
 export const brand = {
   50: 'hsl(210, 100%, 95%)',
   100: 'hsl(210, 100%, 92%)',
-  200: 'hsl(210, 100%, 80%)',
-  300: 'hsl(210, 100%, 65%)',
-  400: 'hsl(210, 98%, 48%)',
-  500: 'hsl(210, 98%, 42%)',
-  600: 'hsl(210, 98%, 55%)',
-  700: 'hsl(210, 100%, 35%)',
-  800: 'hsl(210, 100%, 16%)',
+  200: '#94bfce',
+  300: '#71a4b5',
+  400: '#5690a2',
+  500: '#387c90',
+  600: '#2c6d7f',
+  700: '#1d5969',
+  800: '#0e4655',
   900: 'hsl(210, 100%, 21%)',
 };
+
 
 export const gray = {
   50: 'hsl(220, 35%, 97%)',
@@ -138,7 +139,7 @@ export const getDesignTokens = (mode) => {
       divider: mode === 'dark' ? alpha(gray[700], 0.6) : alpha(gray[300], 0.4),
       background: {
         default: 'hsl(0, 0%, 99%)',
-        paper: 'hsl(220, 35%, 97%)',
+        paper: 'hsl(220, 35%, 24%)',
         ...(mode === 'dark' && { default: gray[900], paper: 'hsl(220, 30%, 7%)' }),
       },
       text: {
@@ -250,8 +251,8 @@ export const colorSchemes = {
       },
       divider: alpha(gray[300], 0.4),
       background: {
-        default: 'hsl(0, 0%, 99%)',
-        paper: 'hsl(220, 35%, 97%)',
+        default: 'hsl(0, 0%, 98%)',
+        paper: 'hsl(220, 35%, 96%)',
       },
       text: {
         primary: gray[800],

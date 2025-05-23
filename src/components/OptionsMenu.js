@@ -27,6 +27,7 @@ export default function OptionsMenu() {
   return (
     <React.Fragment>
       <MenuButton
+        disabled={true}
         aria-label="Open menu"
         onClick={handleClick}
         sx={{ borderColor: 'transparent' }}

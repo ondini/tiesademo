@@ -16,18 +16,18 @@ const drawerWidth = 240;
 // });
 
 
-const theme = createTheme({
-  palette: {
-    background: { default: '#ffffff', darker: '#fcfcfc' },
-    primary: { main: '#2c6d7f', light: '#71929c' },
-    secondary: { main: '#00FFC3' },
-    text: { primary: '#071813', secondary: '#6b7280' },
-    mode: 'dark',
-  },
-  typography: {
-    fontFamily: 'Roboto, sans-serif',
-  },
-});
+// const theme = createTheme({
+//   palette: {
+//     background: { default: '#ffffff', darker: '#fcfcfc' },
+//     primary: { main: '#2c6d7f', light: '#71929c' },
+//     secondary: { main: '#00FFC3' },
+//     text: { primary: '#071813', secondary: '#6b7280' },
+//     mode: 'dark',
+//   },
+//   typography: {
+//     fontFamily: 'Roboto, sans-serif',
+//   },
+// });
 
 export default function App() {
   return (
@@ -70,7 +70,7 @@ export default function App() {
         <Sidebar />
       </Drawer> */}
       <SideMenu />
-      <Box component="main" sx={{ flexGrow: 1, bgcolor: "background.darker", p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1, bgcolor: "background.default", p: 3 }}>
         {/* <Toolbar /> */}
         <Dashboard />
       </Box>

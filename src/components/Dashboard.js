@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import { Box, Typography, Grid, LinearProgress, Card, CardContent, IconButton,   Table,
   TableBody,
   TableCell,
@@ -12,6 +12,9 @@ import { Box, Typography, Grid, LinearProgress, Card, CardContent, IconButton,  
 import { PlayArrow, Pause, SkipNext, SkipPrevious  } from "@mui/icons-material";
 import Header from './Header';
 import Plot from "react-plotly.js";
+import { useTheme } from "@mui/material/styles";
+import { alpha } from '@mui/material/styles';
+import { LineChart } from '@mui/x-charts';
 
 const Dashboard = () => {
   const video1Ref = useRef(null);
@@ -29,6 +32,8 @@ const Dashboard = () => {
   const [progress, setProgress] = useState(0);
   
   const fps = 10;
+
+  const theme = useTheme();
 
 
   useEffect(() => {
@@ -48,7 +53,6 @@ const Dashboard = () => {
       video2Ref.current.currentTime = video1Ref.current.currentTime;
       setCurrentTime(video1Ref.current.currentTime);
       setProgress((duration > 0 ? ((currentTime) / duration) * 100 : 0))
-      console.log(progress);
     }
   };
 
@@ -84,7 +88,7 @@ const Dashboard = () => {
     const nextTime = Math.max(0, Math.min(duration, (v1.currentTime + delta)));
     v1.currentTime = nextTime;
     setCurrentTime(nextTime);
-    setProgress((duration > 0 ? ((currentTime+1) / duration) * 100 : 0))
+    // setProgress((duration > 0 ? ((currentTime+1) / duration) * 100 : 0))
     console.log(progress);
     // v2.currentTime = nextTime;
     // setCurrentTime(nextTime);
@@ -102,20 +106,24 @@ const Dashboard = () => {
     const idxMax = Math.floor(frame / 3);
     const newCurves = metrics.curves.map(curve => ({
       ...curve,
-      x: curve.x.slice(0, idxMax + 1),
+      x: curve.x.slice(0, idxMax + 1).map(x => parseFloat(x)),
       y: curve.y.slice(0, idxMax + 1)
     }));
     setPlotData(newCurves);
+    console.log(newCurves);
   }, [currentTime, metrics]);
 
   return (
-    <Box sx={{ bgcolor: "background.darker" }}>
+    <>
       <Header />
-      <Typography variant="h6" sx={{ mb: 2, color: 'primary.main' }}>
-        Treatment recording #21
+      <Typography variant="h6" sx={(theme) => ({
+            mb: 2,
+            color: alpha(theme.palette.primary.main, 1),
+          })}>
+        Subject #21 - Session #3
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        This is a recording of the treatment session. The fMRI stream is synchronized with the FUS targeting video. The brain activity metrics are displayed in real-time.
+        This is a demo of the fMRI+FUS feedback loop. The experiment is run real subject dataset and controled in a simulation envirnoment to reach the high-entropy brain state. 
       </Typography>
       <Card variant="outlined" sx={{ mb: 3, p: 2, display: 'flex', alignItems: 'center' }}>
         <IconButton onClick={togglePlay} sx={{ mr: 2 }}>
@@ -162,13 +170,15 @@ const Dashboard = () => {
                   margin: { t: 20, l: 40, r: 20, b: 40 }, // reduce top padding
                   paper_bgcolor: '#ffffff',
                   plot_bgcolor: '#ffffff',
-                  font: { color: '#071813' }
+                  font: { color: '#071813' },
+                  colorway: [ '#71a4b5', '#5690a2', '#387c90'],
                 }}
                 config={{ responsive: true }}
                 useResizeHandler
                 style={{ width: '100%', height: '100%' }}
               />
             )}
+
             </CardContent>
             </Card>
         </Grid>
@@ -221,7 +231,7 @@ const Dashboard = () => {
         </Grid>
        
       </Grid>
-    </Box>
+    </>
   );
 };
 
