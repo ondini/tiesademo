@@ -1,68 +1,112 @@
 [
     {
-        "name": "Primary Visual Cortex (V1)",
+        "name": "Posterior Cingulate Cortex (PCC)",
         "mni_coordinates": [
-            -10,
-            -90,
-            0
+            0,
+            -52,
+            18
         ],
-        "description": "Processes basic visual input in the occipital lobe.",
+        "description": "Central hub of the DMN, involved in self-referential thinking.",
         "frame": 0,
-        "duration": 1
+        "duration": 1.8
     },
     {
-        "name": "Fusiform Face Area (FFA)",
+        "name": "Medial Prefrontal Cortex (mPFC)",
         "mni_coordinates": [
-            40,
-            -55,
-            -10
+            -6,
+            52,
+            -2
         ],
-        "description": "Involved in facial recognition in the fusiform gyrus.",
-        "frame": 10,
-        "duration": 0.5
+        "description": "Key DMN node for social cognition and self-referential processing.",
+        "frame": 18,
+        "duration": 1.5
     },
     {
-        "name": "Dorsolateral Prefrontal Cortex (DLPFC)",
+        "name": "Left Inferior Parietal Lobule (L-IPL)",
         "mni_coordinates": [
-            30,
-            45,
-            30
+            -46,
+            -68,
+            32
         ],
-        "description": "Handles executive functions and working memory.",
-        "frame": 15,
-        "duration": 0.6
+        "description": "DMN component involved in memory retrieval and attention.",
+        "frame": 33,
+        "duration": 1.2
     },
     {
-        "name": "Posterior Parietal Cortex (PPC)",
+        "name": "Right Inferior Parietal Lobule (R-IPL)",
         "mni_coordinates": [
-            -25,
-            -60,
-            50
+            50,
+            -64,
+            32
         ],
-        "description": "Supports visuospatial attention and sensory integration.",
-        "frame": 21,
-        "duration": 0.9
+        "description": "DMN component involved in spatial attention and memory.",
+        "frame": 45,
+        "duration": 1.4
     },
     {
-        "name": "Anterior Cingulate Cortex (ACC)",
+        "name": "Left Medial Temporal Lobe (L-MTL)",
         "mni_coordinates": [
-            0,
-            30,
-            20
+            -4,
+            -22,
+            38
         ],
-        "description": "Linked to decision-making and emotion regulation.",
-        "frame": 30,
-        "duration": 0.7
+        "description": "DMN region connecting to memory systems in hippocampus.",
+        "frame": 59,
+        "duration": 1.6
     },
     {
-        "name": "Supplementary Motor Area (SMA)",
+        "name": "Right Medial Temporal Lobe (R-MTL)",
         "mni_coordinates": [
-            0,
-            -5,
-            60
+            4,
+            -22,
+            38
         ],
-        "description": "Contributes to motor planning and initiation.",
-        "frame": 37,
-        "duration": 1
+        "description": "DMN region connecting to memory systems in hippocampus.",
+        "frame": 75,
+        "duration": 1.3
+    },
+    {
+        "name": "Precuneus",
+        "mni_coordinates": [
+            -8,
+            -56,
+            26
+        ],
+        "description": "DMN region involved in visuospatial imagery and consciousness.",
+        "frame": 88,
+        "duration": 1.7
+    },
+    {
+        "name": "Ventromedial Prefrontal Cortex (vmPFC)",
+        "mni_coordinates": [
+            2,
+            38,
+            -12
+        ],
+        "description": "DMN region for emotional processing and decision-making.",
+        "frame": 105,
+        "duration": 1.5
+    },
+    {
+        "name": "Left Angular Gyrus (L-AG)",
+        "mni_coordinates": [
+            -48,
+            -62,
+            28
+        ],
+        "description": "DMN node involved in semantic processing and memory.",
+        "frame": 120,
+        "duration": 1.8
+    },
+    {
+        "name": "Right Angular Gyrus (R-AG)",
+        "mni_coordinates": [
+            52,
+            -58,
+            26
+        ],
+        "description": "DMN node involved in semantic processing and memory.",
+        "frame": 138,
+        "duration": 0.8
     }
 ]

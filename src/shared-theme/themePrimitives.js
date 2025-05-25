@@ -251,7 +251,7 @@ export const colorSchemes = {
       },
       divider: alpha(gray[300], 0.4),
       background: {
-        default: 'hsl(0, 0%, 98%)',
+        default: 'hsl(0, 4.80%, 95.90%)',
         paper: 'hsl(220, 35%, 96%)',
       },
       text: {

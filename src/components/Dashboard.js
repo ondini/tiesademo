@@ -9,7 +9,7 @@ import { Box, Typography, Grid, LinearProgress, Card, CardContent, IconButton,  
   CardHeader,
   Divider
 } from "@mui/material";
-import { PlayArrow, Pause, SkipNext, SkipPrevious  } from "@mui/icons-material";
+import { PlayArrow, Pause, SkipNext, SkipPrevious, Replay} from "@mui/icons-material";
 import Header from './Header';
 import Plot from "react-plotly.js";
 import { useTheme } from "@mui/material/styles";
@@ -53,6 +53,10 @@ const Dashboard = () => {
       video2Ref.current.currentTime = video1Ref.current.currentTime;
       setCurrentTime(video1Ref.current.currentTime);
       setProgress((duration > 0 ? ((currentTime) / duration) * 100 : 0))
+      if (video1Ref.current.currentTime >= duration) {
+        video1Ref.current.pause();
+        setPlaying(false);
+      }
     }
   };
 
@@ -113,6 +117,24 @@ const Dashboard = () => {
     console.log(newCurves);
   }, [currentTime, metrics]);
 
+  const resetPlayback = () => {
+    const v1 = video1Ref.current;
+    if (v1) {
+      v1.currentTime = 0;
+    }
+    setCurrentTime(0);
+    setProgress(0);
+    setPastTargets([]);
+    // if (metrics) {
+    //   const newCurves = metrics.curves.map(curve => ({
+    //     ...curve,
+    //     x: [],
+    //     y: []
+    //   }));
+    //   setPlotData(newCurves);
+    // }
+  };
+
   return (
     <>
       <Header />
@@ -123,7 +145,7 @@ const Dashboard = () => {
         Subject #21 - Session #3
       </Typography>
       <Typography variant="body1" sx={{ mb: 2 }}>
-        This is a demo of the fMRI+FUS feedback loop. The experiment is run real subject dataset and controled in a simulation envirnoment to reach the high-entropy brain state. 
+        This is a demo of the fMRI+FUS feedback loop. The experiment is run on a real subject dataset and controlled in a simulation environment to reach the high-entropy brain state. 
       </Typography>
       <Card variant="outlined" sx={{ mb: 3, p: 2, display: 'flex', alignItems: 'center' }}>
         <IconButton onClick={togglePlay} sx={{ mr: 2 }}>
@@ -131,58 +153,23 @@ const Dashboard = () => {
         </IconButton>
         <IconButton onClick={() => stepFrame(-1)}><SkipPrevious /></IconButton>
         <IconButton onClick={() => stepFrame(1)}><SkipNext /></IconButton>
+        <IconButton onClick={() => resetPlayback()} sx={{ ml: 2 }}>
+          <Replay />
+        </IconButton>
         {/* <Slider
           value={currentTime}
           max={duration}
           onChange={handleSeek}
           sx={{ flex: 1 }}
         /> */}
-        <LinearProgress variant="determinate" value={progress} sx={{ flex:1, height: 6, borderRadius: 5, backgroundColor: '#e0e0e0' }} />
-        <Typography sx={{ ml: 2, width: 60, textAlign: 'right' }}>
-          {progress.toFixed(1)}%
+        <LinearProgress variant={playing ? 'indeterminate' : 'buffer'} color={'background'} sx={{ flex:1, height: 6, borderRadius: 5, backgroundColor: '#e0e0e0' }} />
+        <Typography sx={{ ml: 2, mr:2, width: 60, textAlign: 'right' }}>
+          {currentTime.toFixed(1)}s
         </Typography>
       </Card>
       
       <Grid container spacing={2}>
-      <Grid container spacing={2} size={{xs:12, md:7}}>
-        <Grid size={12}>
-        <Card variant="outlined">
-          <CardHeader title="fMRI stream" />
-          <CardContent>
-            <video
-              ref={video1Ref}
-              src="/fmri_animation.mp4"
-              width="100%"
-              onTimeUpdate={syncVideos}
-            />
-            </CardContent>
-          </Card>
-        </Grid>
 
-        <Grid size={{xs:12, md:12}}>
-        <Card variant="outlined" sx={{height: 400, display: 'flex', flexDirection: 'column'}}>
-          <CardHeader title="Brain activity metrics" />
-          <CardContent  sx={{ flex: 1, p: 2 }}>
-            {plotData.length > 0 && (
-                <Plot
-                data={plotData}
-                layout={{
-                  margin: { t: 20, l: 40, r: 20, b: 40 }, // reduce top padding
-                  paper_bgcolor: '#ffffff',
-                  plot_bgcolor: '#ffffff',
-                  font: { color: '#071813' },
-                  colorway: [ '#71a4b5', '#5690a2', '#387c90'],
-                }}
-                config={{ responsive: true }}
-                useResizeHandler
-                style={{ width: '100%', height: '100%' }}
-              />
-            )}
-
-            </CardContent>
-            </Card>
-        </Grid>
-        </Grid>
 
         <Grid size={{xs:12, md:5}}>
           <Card variant="outlined">
@@ -228,6 +215,45 @@ const Dashboard = () => {
                 </TableContainer>
             </CardContent>
           </Card>
+        </Grid>
+        <Grid container spacing={2} size={{xs:12, md:7}}>
+        <Grid size={12}>
+        <Card variant="outlined">
+          <CardHeader title="fMRI stream" />
+          <CardContent>
+            <video
+              ref={video1Ref}
+              src="/fmri_animation.mp4"
+              width="100%"
+              onTimeUpdate={syncVideos}
+            />
+            </CardContent>
+          </Card>
+        </Grid>
+
+        <Grid size={{xs:12, md:12}}>
+        <Card variant="outlined" sx={{height: 400, display: 'flex', flexDirection: 'column'}}>
+          <CardHeader title="Brain activity metrics" />
+          <CardContent  sx={{ flex: 1, p: 2 }}>
+            {plotData.length > 0 && (
+                <Plot
+                data={plotData}
+                layout={{
+                  margin: { t: 20, l: 40, r: 20, b: 40 }, // reduce top padding
+                  paper_bgcolor: '#ffffff',
+                  plot_bgcolor: '#ffffff',
+                  font: { color: '#071813' },
+                  colorway: [ '#71a4b5', '#5690a2', '#387c90'],
+                }}
+                config={{ responsive: true }}
+                useResizeHandler
+                style={{ width: '100%', height: '100%' }}
+              />
+            )}
+
+            </CardContent>
+            </Card>
+        </Grid>
         </Grid>
        
       </Grid>

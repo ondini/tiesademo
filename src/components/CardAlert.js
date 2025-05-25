@@ -16,8 +16,8 @@ export default function CardAlert() {
         <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
           Get in touch with us to learn more about our fMRI+FUS feedback loop and how it can help you.
         </Typography>
-        <Button variant="contained" size="small" fullWidth>
-        Order consultation
+        <Button variant="contained" size="small" fullWidth  onClick={() => window.location.href = 'https://tiesa.ai'}>
+         Contact us
         </Button>
       </CardContent>
     </Card>
