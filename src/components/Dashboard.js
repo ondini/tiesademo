@@ -40,8 +40,28 @@ const Dashboard = () => {
     fetch("/metrics.json")
       .then((res) => res.json())
       .then((data) => {
+    
+        // Create affine combination (weighted average) of the two curves
+        const curve1 = data.curves[0];
+        const curve2 = data.curves[1];
+        
+        // Calculate compound metric (60% Network Coherence + 40% DMN Synchrony)
+        const compoundY = curve1.y.map((val, i) => (0.6 * val + 0.4 * curve2.y[i]));
+        
+        // Create new compound curve
+        const compoundCurve = {
+          x: [...curve1.x], // Use same x values
+          y: compoundY,
+          type: "scatter",
+          mode: "lines+markers",
+          name: "Compound metric",
+        };
+        data = {
+          "curves": [...data.curves, compoundCurve],
+        }
         setMetrics(data);
         setPlotData(data.curves.map(curve => ({ ...curve, x: [], y: [] })));
+
       });
     fetch('/targets.json')
       .then(res => res.json())
