@@ -1,85 +1,92 @@
-import React from 'react';
-import {
-  Box,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Divider,
-  Typography
-} from '@mui/material';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import HistoryIcon from '@mui/icons-material/History';
-import DevicesIcon from '@mui/icons-material/Devices';
-import PeopleIcon from '@mui/icons-material/People';
-import SettingsIcon from '@mui/icons-material/Settings';
-import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Avatar from '@mui/material/Avatar';
+import MuiDrawer, { drawerClasses } from '@mui/material/Drawer';
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+// import SelectContent from './SelectContent';
+import MenuContent from './MenuContent';
+import CardAlert from './CardAlert';
+import OptionsMenu from './OptionsMenu';
 
-const Sidebar = () => {
+const drawerWidth = 240;
+
+const Drawer = styled(MuiDrawer)({
+  width: drawerWidth,
+  flexShrink: 0,
+  boxSizing: 'border-box',
+  mt: 10,
+  [`& .${drawerClasses.paper}`]: {
+    width: drawerWidth,
+    boxSizing: 'border-box',
+  },
+});
+
+export default function SideMenu() {
   return (
-    <Box
+    <Drawer
+      variant="permanent"
       sx={{
-        bgcolor: 'background.default',
-        color: '#fff',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        py: 2,
-        minHeight: 'calc(100vh - 64px)',
+        display: { xs: 'none', md: 'block' },
+        [`& .${drawerClasses.paper}`]: {
+          backgroundColor: 'background.paper',
+        },
       }}
     >
-      <Box>
-        <Typography variant="h6" sx={{ px: 2, mb: 2 }}>
-          fMRI Suite
-        </Typography>
-        <List>
-          {[
-            { text: 'Dashboard', icon: <DashboardIcon />, active: false },
-            { text: 'Current recording', icon: <FiberManualRecordIcon />, active: false },
-            { text: 'Past recordings', icon: <HistoryIcon />, active: true },
-            { text: 'Manage devices', icon: <DevicesIcon />, active: false },
-            { text: 'Manage subjects', icon: <PeopleIcon />, active: false }
-          ].map(({ text, icon, active }) => (
-            <ListItem
-              button
-              key={text}
-              disabled={!active}
-              sx={{
-                bgcolor: active ? 'primary.light' : 'transparent',
-                color: active ? '#071813' : '#aaa',
-                '&:hover': {
-                  bgcolor: active ? '#00e6b0' : 'transparent'
-                }
-              }}
-            >
-              <ListItemIcon sx={{ color: active ? '#071813' : '#666' }}>
-                {icon}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+      <Box
+        sx={{
+          display: 'flex',
+          mt: 'calc(var(--template-frame-height, 0px) + 4px)',
+          p: 1.5,
+        }}
+      >
+        {/* <SelectContent /> */}
+        <Box
+          component="img"
+          src="/logo.png"
+          alt="logo"
+          sx={{ height: 40, padding: 0.6, mr: 'auto' }}
+        />
       </Box>
-
-      <Box>
-        <Divider sx={{ borderColor: '#444' }} />
-        <List>
-          {[
-            { text: 'Settings', icon: <SettingsIcon /> },
-            { text: 'Order consultation', icon: <LocalHospitalIcon /> },
-            { text: 'Support', icon: <HelpOutlineIcon /> }
-          ].map(({ text, icon }) => (
-            <ListItem button key={text} disabled sx={{ color: '#666' }}>
-              <ListItemIcon sx={{ color: '#444' }}>{icon}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+      <Divider />
+      <Box
+        sx={{
+          overflow: 'auto',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <MenuContent />
+        <CardAlert />
       </Box>
-    </Box>
+      <Stack
+        direction="row"
+        sx={{
+          p: 2,
+          gap: 1,
+          alignItems: 'center',
+          borderTop: '1px solid',
+          borderColor: 'divider',
+        }}
+      >
+        <Avatar
+          sizes="small"
+          alt="Demo User"
+          sx={{ width: 36, height: 36 }}
+        />
+        <Box sx={{ mr: 'auto' }}>
+          <Typography variant="body2" sx={{ fontWeight: 500, lineHeight: '16px' }}>
+            Demo user
+          </Typography>
+          <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+            demo@tiesa.ai
+          </Typography>
+        </Box>
+        <OptionsMenu />
+      </Stack>
+    </Drawer>
   );
-};
-
-export default Sidebar;
+}

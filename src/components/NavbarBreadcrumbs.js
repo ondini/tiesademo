@@ -15,16 +15,34 @@ const StyledBreadcrumbs = styled(Breadcrumbs)(({ theme }) => ({
   },
 }));
 
-export default function NavbarBreadcrumbs() {
+export default function NavbarBreadcrumbs({ selectedRecording, onNavigateToList }) {
+  const handleDatasetsClick = () => {
+    if (selectedRecording && onNavigateToList) {
+      onNavigateToList();
+    }
+  };
+
   return (
     <StyledBreadcrumbs
       aria-label="breadcrumb"
       separator={<NavigateNextRoundedIcon fontSize="small" />}
     >
-      <Typography variant="body1">Datasets</Typography>
-      <Typography variant="body1" sx={{ color: 'text.primary', fontWeight: 600 }}>
-        Subject #21
+      <Typography 
+        variant="body1" 
+        sx={{ 
+          cursor: selectedRecording ? 'pointer' : 'default',
+          color: selectedRecording ? 'primary.main' : 'text.primary',
+          '&:hover': selectedRecording ? { textDecoration: 'underline' } : {}
+        }}
+        onClick={handleDatasetsClick}
+      >
+        Datasets
       </Typography>
+      {selectedRecording && (
+        <Typography variant="body1" sx={{ color: 'text.primary', fontWeight: 600 }}>
+          Subject #{selectedRecording.subjectId} - Session #{selectedRecording.sessionId}
+        </Typography>
+      )}
     </StyledBreadcrumbs>
   );
 }

@@ -8,7 +8,7 @@ import MenuButton from './MenuButton';
 
 // import Search from './Search';
 
-export default function Header() {
+export default function Header({ selectedRecording, onNavigateToList }) {
   return (
     <Stack
       direction="row"
@@ -22,7 +22,10 @@ export default function Header() {
       }}
       spacing={2}
     >
-      <NavbarBreadcrumbs />
+      <NavbarBreadcrumbs 
+        selectedRecording={selectedRecording} 
+        onNavigateToList={onNavigateToList}
+      />
       <Stack direction="row" sx={{ gap: 1 }}>
         {/* <Search /> */}
         {/* <CustomDatePicker /> */}
