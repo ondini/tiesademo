@@ -1,0 +1,992 @@
+[
+    {
+        "name": "CORTEX_RIGHT_SP 162",
+        "mni_coordinates": [
+            5,
+            -42,
+            41
+        ],
+        "frame": 0,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 14",
+        "mni_coordinates": [
+            4,
+            -34,
+            20
+        ],
+        "frame": 1,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 87",
+        "mni_coordinates": [
+            19,
+            58,
+            21
+        ],
+        "frame": 2,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 60",
+        "mni_coordinates": [
+            9,
+            13,
+            39
+        ],
+        "frame": 3,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 125",
+        "mni_coordinates": [
+            62,
+            -18,
+            -3
+        ],
+        "frame": 4,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 32",
+        "mni_coordinates": [
+            2,
+            -22,
+            39
+        ],
+        "frame": 5,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 145",
+        "mni_coordinates": [
+            34,
+            -64,
+            43
+        ],
+        "frame": 6,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 15",
+        "mni_coordinates": [
+            -10,
+            -70,
+            34
+        ],
+        "frame": 7,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 92",
+        "mni_coordinates": [
+            -22,
+            27,
+            -19
+        ],
+        "frame": 8,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 135",
+        "mni_coordinates": [
+            41,
+            -22,
+            -27
+        ],
+        "frame": 9,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 76",
+        "mni_coordinates": [
+            46,
+            31,
+            -12
+        ],
+        "frame": 10,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 105",
+        "mni_coordinates": [
+            47,
+            -30,
+            21
+        ],
+        "frame": 11,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 64",
+        "mni_coordinates": [
+            10,
+            44,
+            -1
+        ],
+        "frame": 12,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 70",
+        "mni_coordinates": [
+            11,
+            38,
+            50
+        ],
+        "frame": 13,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 115",
+        "mni_coordinates": [
+            -40,
+            -4,
+            12
+        ],
+        "frame": 14,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 13",
+        "mni_coordinates": [
+            -17,
+            -89,
+            23
+        ],
+        "frame": 15,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 131",
+        "mni_coordinates": [
+            40,
+            10,
+            -33
+        ],
+        "frame": 16,
+        "duration": 1
+    },
+    {
+        "name": "BRAIN_STEM",
+        "mni_coordinates": [
+            44,
+            47,
+            19
+        ],
+        "frame": 17,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 180",
+        "mni_coordinates": [
+            -2,
+            35,
+            15
+        ],
+        "frame": 18,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 70",
+        "mni_coordinates": [
+            11,
+            38,
+            50
+        ],
+        "frame": 19,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 117",
+        "mni_coordinates": [
+            -36,
+            -41,
+            40
+        ],
+        "frame": 20,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 74",
+        "mni_coordinates": [
+            -51,
+            15,
+            11
+        ],
+        "frame": 21,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 81",
+        "mni_coordinates": [
+            46,
+            26,
+            19
+        ],
+        "frame": 22,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 138",
+        "mni_coordinates": [
+            -45,
+            -61,
+            -10
+        ],
+        "frame": 23,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 52",
+        "mni_coordinates": [
+            -35,
+            -35,
+            51
+        ],
+        "frame": 24,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 16",
+        "mni_coordinates": [
+            26,
+            -81,
+            30
+        ],
+        "frame": 25,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 136",
+        "mni_coordinates": [
+            46,
+            -42,
+            -20
+        ],
+        "frame": 26,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 132",
+        "mni_coordinates": [
+            61,
+            -7,
+            -24
+        ],
+        "frame": 27,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 50",
+        "mni_coordinates": [
+            24,
+            -63,
+            45
+        ],
+        "frame": 28,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 30",
+        "mni_coordinates": [
+            -4,
+            -60,
+            34
+        ],
+        "frame": 29,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 123",
+        "mni_coordinates": [
+            -51,
+            10,
+            -17
+        ],
+        "frame": 30,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 111",
+        "mni_coordinates": [
+            33,
+            23,
+            -3
+        ],
+        "frame": 31,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 116",
+        "mni_coordinates": [
+            -50,
+            -28,
+            36
+        ],
+        "frame": 32,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 92",
+        "mni_coordinates": [
+            -22,
+            27,
+            -19
+        ],
+        "frame": 33,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 123",
+        "mni_coordinates": [
+            52,
+            10,
+            -18
+        ],
+        "frame": 34,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 135",
+        "mni_coordinates": [
+            -40,
+            -22,
+            -28
+        ],
+        "frame": 35,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 49",
+        "mni_coordinates": [
+            19,
+            -61,
+            59
+        ],
+        "frame": 36,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 7",
+        "mni_coordinates": [
+            30,
+            -72,
+            -13
+        ],
+        "frame": 37,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 48",
+        "mni_coordinates": [
+            27,
+            -55,
+            51
+        ],
+        "frame": 38,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 92",
+        "mni_coordinates": [
+            22,
+            24,
+            -20
+        ],
+        "frame": 39,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 94",
+        "mni_coordinates": [
+            -32,
+            19,
+            -18
+        ],
+        "frame": 40,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 41",
+        "mni_coordinates": [
+            -8,
+            -2,
+            43
+        ],
+        "frame": 41,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 113",
+        "mni_coordinates": [
+            47,
+            2,
+            4
+        ],
+        "frame": 42,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 139",
+        "mni_coordinates": [
+            -53,
+            -46,
+            7
+        ],
+        "frame": 43,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 100",
+        "mni_coordinates": [
+            -58,
+            -13,
+            13
+        ],
+        "frame": 44,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 2",
+        "mni_coordinates": [
+            44,
+            -65,
+            3
+        ],
+        "frame": 45,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 172",
+        "mni_coordinates": [
+            37,
+            -3,
+            -43
+        ],
+        "frame": 46,
+        "duration": 1
+    },
+    {
+        "name": "ACCUMBENS_RIGHT",
+        "mni_coordinates": [
+            40,
+            68,
+            31
+        ],
+        "frame": 47,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 129",
+        "mni_coordinates": [
+            48,
+            -30,
+            -3
+        ],
+        "frame": 48,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 170",
+        "mni_coordinates": [
+            26,
+            55,
+            5
+        ],
+        "frame": 49,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 92",
+        "mni_coordinates": [
+            22,
+            24,
+            -20
+        ],
+        "frame": 50,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 54",
+        "mni_coordinates": [
+            36,
+            -11,
+            62
+        ],
+        "frame": 51,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 51",
+        "mni_coordinates": [
+            44,
+            -24,
+            55
+        ],
+        "frame": 52,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 4",
+        "mni_coordinates": [
+            -11,
+            -80,
+            2
+        ],
+        "frame": 53,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 90",
+        "mni_coordinates": [
+            -12,
+            59,
+            -16
+        ],
+        "frame": 54,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 137",
+        "mni_coordinates": [
+            58,
+            -53,
+            -4
+        ],
+        "frame": 55,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 153",
+        "mni_coordinates": [
+            19,
+            -52,
+            -9
+        ],
+        "frame": 56,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 100",
+        "mni_coordinates": [
+            57,
+            -14,
+            14
+        ],
+        "frame": 57,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 166",
+        "mni_coordinates": [
+            14,
+            12,
+            -19
+        ],
+        "frame": 58,
+        "duration": 1
+    },
+    {
+        "name": "CAUDATE_RIGHT",
+        "mni_coordinates": [
+            38,
+            67,
+            41
+        ],
+        "frame": 59,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 72",
+        "mni_coordinates": [
+            10,
+            64,
+            6
+        ],
+        "frame": 60,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 140",
+        "mni_coordinates": [
+            53,
+            -59,
+            7
+        ],
+        "frame": 61,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 154",
+        "mni_coordinates": [
+            28,
+            -59,
+            -10
+        ],
+        "frame": 62,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 93",
+        "mni_coordinates": [
+            -10,
+            29,
+            -23
+        ],
+        "frame": 63,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 168",
+        "mni_coordinates": [
+            -36,
+            -15,
+            13
+        ],
+        "frame": 64,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 148",
+        "mni_coordinates": [
+            57,
+            -33,
+            34
+        ],
+        "frame": 65,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 146",
+        "mni_coordinates": [
+            32,
+            -73,
+            27
+        ],
+        "frame": 66,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 81",
+        "mni_coordinates": [
+            -44,
+            21,
+            21
+        ],
+        "frame": 67,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 100",
+        "mni_coordinates": [
+            -58,
+            -13,
+            13
+        ],
+        "frame": 68,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 148",
+        "mni_coordinates": [
+            57,
+            -33,
+            34
+        ],
+        "frame": 69,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 125",
+        "mni_coordinates": [
+            62,
+            -18,
+            -3
+        ],
+        "frame": 70,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 120",
+        "mni_coordinates": [
+            30,
+            -26,
+            -13
+        ],
+        "frame": 71,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 21",
+        "mni_coordinates": [
+            45,
+            -82,
+            -5
+        ],
+        "frame": 72,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 25",
+        "mni_coordinates": [
+            -57,
+            -45,
+            21
+        ],
+        "frame": 73,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 72",
+        "mni_coordinates": [
+            -10,
+            63,
+            9
+        ],
+        "frame": 74,
+        "duration": 1
+    },
+    {
+        "name": "PUTAMEN_LEFT",
+        "mni_coordinates": [
+            58,
+            62,
+            35
+        ],
+        "frame": 75,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 104",
+        "mni_coordinates": [
+            -39,
+            -33,
+            16
+        ],
+        "frame": 76,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 162",
+        "mni_coordinates": [
+            -4,
+            -37,
+            43
+        ],
+        "frame": 77,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 62",
+        "mni_coordinates": [
+            9,
+            36,
+            23
+        ],
+        "frame": 78,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 2",
+        "mni_coordinates": [
+            -43,
+            -67,
+            4
+        ],
+        "frame": 79,
+        "duration": 2
+    },
+    {
+        "name": "CORTEX_LEFT_SP 117",
+        "mni_coordinates": [
+            -36,
+            -41,
+            40
+        ],
+        "frame": 81,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 27",
+        "mni_coordinates": [
+            -6,
+            -50,
+            47
+        ],
+        "frame": 82,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 137",
+        "mni_coordinates": [
+            -58,
+            -57,
+            -1
+        ],
+        "frame": 83,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 33",
+        "mni_coordinates": [
+            3,
+            -53,
+            18
+        ],
+        "frame": 84,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 106",
+        "mni_coordinates": [
+            41,
+            -5,
+            0
+        ],
+        "frame": 85,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 28",
+        "mni_coordinates": [
+            -60,
+            -48,
+            13
+        ],
+        "frame": 86,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 90",
+        "mni_coordinates": [
+            13,
+            58,
+            -16
+        ],
+        "frame": 87,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 104",
+        "mni_coordinates": [
+            40,
+            -31,
+            17
+        ],
+        "frame": 88,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 50",
+        "mni_coordinates": [
+            -22,
+            -64,
+            42
+        ],
+        "frame": 89,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 103",
+        "mni_coordinates": [
+            -38,
+            -22,
+            0
+        ],
+        "frame": 90,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 86",
+        "mni_coordinates": [
+            28,
+            44,
+            23
+        ],
+        "frame": 91,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 24",
+        "mni_coordinates": [
+            44,
+            -22,
+            10
+        ],
+        "frame": 92,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 23",
+        "mni_coordinates": [
+            -45,
+            -72,
+            5
+        ],
+        "frame": 93,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 67",
+        "mni_coordinates": [
+            -37,
+            17,
+            49
+        ],
+        "frame": 94,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 58",
+        "mni_coordinates": [
+            2,
+            11,
+            28
+        ],
+        "frame": 95,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 67",
+        "mni_coordinates": [
+            -37,
+            17,
+            49
+        ],
+        "frame": 96,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 101",
+        "mni_coordinates": [
+            43,
+            -21,
+            16
+        ],
+        "frame": 97,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_LEFT_SP 101",
+        "mni_coordinates": [
+            -46,
+            -22,
+            16
+        ],
+        "frame": 98,
+        "duration": 1
+    },
+    {
+        "name": "CORTEX_RIGHT_SP 106",
+        "mni_coordinates": [
+            41,
+            -5,
+            0
+        ],
+        "frame": 99,
+        "duration": 1
+    }
+]

@@ -75,8 +75,9 @@ const RecordingDetails = ({ recording, onBack }) => {
       })
       .catch(err => console.error('Error loading metrics:', err));
     
-    // Load global targets (could be made recording-specific later)
-    fetch('/targets.json')
+    // Load recording-specific targets
+    const targetsPath = `/recordings/${recording.folder}/targets.json`;
+    fetch(targetsPath)
       .then(res => res.json())
       .then(data => setBrainTargets(data))
       .catch(err => console.error('Error loading targets:', err));
@@ -269,11 +270,19 @@ const RecordingDetails = ({ recording, onBack }) => {
                     <Plot
                       data={plotData}
                       layout={{
-                        margin: { t: 20, l: 40, r: 20, b: 40 },
+                        margin: { t: 20, l: 40, r: 20, b: 60 },
                         paper_bgcolor: '#ffffff',
                         plot_bgcolor: '#ffffff',
                         font: { color: '#071813' },
                         colorway: [ '#71a4b5', '#5690a2', '#387c90'],
+                        showlegend: true,
+                        legend: {
+                          x: 0.5,
+                          xanchor: 'center',
+                          y: -0.2,
+                          yanchor: 'top',
+                          orientation: 'h'
+                        }
                       }}
                       config={{ responsive: true }}
                       useResizeHandler

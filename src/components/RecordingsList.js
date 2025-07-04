@@ -21,7 +21,9 @@ const RecordingsList = ({ onSelectRecording }) => {
       'sub-00_ses-00_start-10',
       'sub-01_ses-00_start-10',
       'sub-02_ses-00_start-10', 
-      'sub-03_ses-00_start-10'
+      'sub-03_ses-00_start-10',
+      'sub-06_ses-00_start-10',
+      'sub-07_ses-00_start-10',
     ];
 
     const recordingsData = recordingFolders.map(folder => {
@@ -37,7 +39,7 @@ const RecordingsList = ({ onSelectRecording }) => {
         previewImage: `/recordings/${folder}/fmri_first_frame.png`,
         videoPath: `/recordings/${folder}/fmri_animation.mp4`,
         metricsPath: `/recordings/${folder}/metrics.json`,
-        targetsVideoPath: `/targets_animation.mp4` // Using global targets video for now
+        targetsVideoPath: `/recordings/${folder}/targets_animation.mp4`
       };
     });
 
