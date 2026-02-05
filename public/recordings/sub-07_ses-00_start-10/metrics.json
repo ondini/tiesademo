@@ -267,7 +267,7 @@
             ],
             "type": "scatter",
             "mode": "lines",
-            "name": "Sample Entropy",
+            "name": "Metric",
             "line": {
                 "dash": "dot"
             }
